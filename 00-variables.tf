@@ -17,12 +17,6 @@ variable "project" {
   default     = "GOD-EKS-PROJECT"
 }
 
-variable "environment" {
-  type        = string
-  description = "Environment"
-  default     = "GOD-EKS-ENV"
-}
-
 variable "cidr" {
   type    = string
   default = null
