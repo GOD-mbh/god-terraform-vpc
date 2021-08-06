@@ -8,13 +8,13 @@ variable "aws_region" {
 variable "cluster_name" {
   type        = string
   description = "EKS cluster name"
-  default     = "GOD-EKS"
+  default     = "GOD-VPC"
 }
 
 variable "project" {
   type        = string
   description = "Project name"
-  default     = "GOD-EKS-PROJECT"
+  default     = "GOD-VPC-PROJECT"
 }
 
 variable "cidr" {
@@ -31,6 +31,12 @@ variable "network" {
   type        = string
   description = "CIDR Template 10.X.0.0/16."
   default     = "10"
+}
+
+variable "single_nat" {
+  type        = bool
+  description = "Single NAT Gateway or separate for AZ"
+  default     = true
 }
 
 variable "availability_zones" {
